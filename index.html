@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flip-book</title>
+    <style>
+      body {
+        overflow: hidden;
+        background-color: #4a4848;
+        background-size: 100% 100%;
+      }
+      #book {
+        margin: 5% auto;
+      }
+      .hard {
+        background-color: #fff;
+        color: rgb(0, 0, 0); 
+        text-align: center; 
+        font-size: 24px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+      }
+      h1 {
+        width: 80%;
+        position: relative;
+        top: 30%;
+        left: 10%;
+      }
+      button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      button:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="book">
+      <div class="hard">
+        <h1>Happy Diwali</h1>
+      </div>
+      <div class="hard"></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-1.jpg);
+          background-size: 100% 100%;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-2.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-3.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-4.png);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-5.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-6.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-7.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-8.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-9.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-10.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-11.png);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-12.png);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-13.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-14.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-15.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-16.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-17.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-18.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-19.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        style="
+          background: url(./images/Diwali\ Special\ Stories\ Festivals\ And\ Mythology\ Of\ India\ -images-20.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <div class="hard"></div>
+      <div class="hard"></div>
+    </div>
+
+    <audio id="turnSound" src="page-turn-sound.mp3" preload="auto"></audio>
+    <audio
+      id="backgroundSound"
+      src="cinematic-fairy-tale-story-main-8697.mp3"
+      loop
+      preload="auto"
+    ></audio>
+
+    <button id="toggleMusic">Toggle Music</button>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="turn.js"></script>
+
+    <script type="text/javascript">
+     
+    const backgroundSound = document.getElementById('backgroundSound');
+    const toggleMusicButton = document.getElementById('toggleMusic');
+
+    backgroundSound.volume = 0.1;
+
+    let firstPageFlipped = false;
+    let isSoundOn = true;
+
+    toggleMusicButton.addEventListener('click', function() {
+        if (isSoundOn) {
+            backgroundSound.pause();
+            toggleMusicButton.textContent = 'Turn Music On';
+            isSoundOn = false;
+        } else {
+            backgroundSound.play();
+            toggleMusicButton.textContent = 'Turn Music Off';
+            isSoundOn = true;
+        }
+    });
+
+    $("#book").turn({
+        width: 650,
+        height: 450,
+        autoCenter: true,
+        when: {
+            turning: function(event, page) {
+                document.getElementById("turnSound").play();
+
+                if (page === 2 && !firstPageFlipped) {
+                    if (isSoundOn) {
+                        backgroundSound.play();
+                    }
+                    firstPageFlipped = true;
+                }
+
+                if (page === 1 || page > 20) {
+                    if (isSoundOn) {
+                        backgroundSound.pause();
+                        toggleMusicButton.textContent = 'Turn Music On';
+                    }
+                } else if (page <= 20) {
+                    if (isSoundOn && backgroundSound.paused) {
+                        backgroundSound.play();
+                        toggleMusicButton.textContent = 'Turn Music Off';
+                    }
+                }
+
+                if (page === 21) {
+                    if (isSoundOn && backgroundSound.paused) {
+                        backgroundSound.play();
+                        toggleMusicButton.textContent = 'Turn Music Off';
+                    }
+                }
+            },
+        },
+    });
+</script>
+  </body>
+</html>
